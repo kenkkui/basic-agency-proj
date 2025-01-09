@@ -11,7 +11,9 @@ export default {
       satoshi: ["Satoshi"],
     },
     fontSize: {
-      base: "14px",
+      h6: "22px",
+      base: "18px",
+      med: "14px",
       sm: "11px",
     },
     extend: {
