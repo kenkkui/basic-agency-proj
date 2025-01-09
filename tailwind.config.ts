@@ -7,10 +7,18 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      satoshi: ["Satoshi"],
+    },
+    fontSize: {
+      base: "14px",
+      sm: "11px",
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        black: "var(--black)",
+        "light-grey": "var(--light-grey)",
+        white: "var(--white)",
       },
     },
   },
