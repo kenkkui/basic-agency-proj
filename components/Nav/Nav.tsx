@@ -4,7 +4,7 @@ import NavMenu from "./NavMenu";
 
 const Nav = () => {
   return (
-    <nav className="fixed w-full px-[80px] py-[50px] text-white leading-none">
+    <nav className="fixed z-[40] w-full px-[80px] py-[50px] text-white leading-none bg-yellow-500">
       <main className="w-full flex justify-between items-center relative">
         <HomeBtn />
 
