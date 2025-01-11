@@ -23,11 +23,6 @@ const CTABtn = () => {
   const handleMouseLeave = () => {
     if (!btnRef.current) return;
 
-    const w = window.screen.width;
-    const h = window.screen.height;
-
-    console.log("w", w, "h", h);
-
     btnRef.current.animate(
       {
         left: "50%",
@@ -50,7 +45,7 @@ const CTABtn = () => {
         left: `${position.x}px`,
       },
       {
-        duration: 600,
+        duration: 500,
         easing: "ease-out",
         fill: "forwards",
       }
