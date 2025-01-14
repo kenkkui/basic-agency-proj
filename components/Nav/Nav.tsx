@@ -1,5 +1,5 @@
 import HomeBtn from "./HomeBtn";
-import NavLinks from "./NavLinks";
+import NavLinks from "./Link/NavLinks";
 import NavMenu from "./NavMenu";
 
 const Nav = () => {
