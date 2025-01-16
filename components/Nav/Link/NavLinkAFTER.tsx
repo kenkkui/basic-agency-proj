@@ -5,14 +5,16 @@ import { AnimatePresence, m } from "framer-motion";
 interface NavLinkAFTER {
   isMouseEnter: number | null;
   id: number;
+  keyCounter: number;
 }
 
-const NavLinkAFTER = ({ isMouseEnter, id }: NavLinkAFTER) => {
+const NavLinkAFTER = ({ isMouseEnter, id, keyCounter }: NavLinkAFTER) => {
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {isMouseEnter === id && (
         <m.div
-          className="w-full h-[1px] bg-white"
+          key={id + keyCounter}
+          className="w-full h-[1px] bg-white absolute left-0 bottom-0"
           initial={{ x: "-100%" }}
           animate={{ x: "0%" }}
           exit={{ x: "100%" }}

@@ -10,14 +10,18 @@ function debouncer(cb: Function, delay: number = 1000) {
   };
 }
 
-function throttle(cb: Function, delay: number = 1000) {
+function throttle(
+  cb: Function,
+  delay: number = 1000,
+  allowWaitingArgs: boolean = true
+) {
   let shouldWait = false;
   let waitingArgs: any;
 
   const timeoutFunc = () => {
     if (waitingArgs == null) {
       shouldWait = false;
-    } else {
+    } else if (allowWaitingArgs) {
       cb(...waitingArgs);
       waitingArgs = null;
       setTimeout(timeoutFunc, delay);
@@ -25,7 +29,7 @@ function throttle(cb: Function, delay: number = 1000) {
   };
 
   return (...args: any) => {
-    if (shouldWait) {
+    if (shouldWait && allowWaitingArgs) {
       waitingArgs = args;
       return;
     }
