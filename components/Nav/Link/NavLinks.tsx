@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import NavLinkAFTER from "./NavLinkAFTER";
-import { throttle } from "@/utils/debouncer-throttle";
 
 const navNames = ["work", "about", "news", "thinking", "careers", "contact"];
 
