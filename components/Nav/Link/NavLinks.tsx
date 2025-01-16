@@ -26,7 +26,7 @@ const NavLinks = () => {
       {navNames.map((nav, i) => {
         return (
           <li
-            className="overflow-hidden relative"
+            className="overflow-x-clip relative"
             key={i}
             onMouseEnter={() => handleMouseOver(i)}
             onMouseLeave={() => setIsMouseEnter(null)}

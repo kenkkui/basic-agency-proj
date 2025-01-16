@@ -1,7 +1,11 @@
-import React from "react";
+import Link from "next/link";
 
 const HomeBtn = () => {
-  return <h1 className="font-bold text-[25px] select-none">BASIC/DEPT®</h1>;
+  return (
+    <Link href={"/"}>
+      <h1 className="font-bold text-[25px] select-none">BASIC/DEPT®</h1>
+    </Link>
+  );
 };
 
 export default HomeBtn;

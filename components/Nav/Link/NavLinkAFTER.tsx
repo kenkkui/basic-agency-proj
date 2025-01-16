@@ -14,7 +14,7 @@ const NavLinkAFTER = ({ isMouseEnter, id, keyCounter }: NavLinkAFTER) => {
       {isMouseEnter === id && (
         <m.div
           key={id + keyCounter}
-          className="w-full h-[1px] bg-white absolute left-0 bottom-0"
+          className="w-full h-[1px] bg-white absolute left-0 -bottom-[2px]"
           initial={{ x: "-100%" }}
           animate={{ x: "0%" }}
           exit={{ x: "100%" }}
