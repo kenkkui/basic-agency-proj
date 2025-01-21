@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import NavLinkAFTER from "./NavLinkAFTER";
+import { throttle } from "@/utils/debouncer-throttle";
 
 const navNames = ["work", "about", "news", "thinking", "careers", "contact"];
 
@@ -10,10 +11,13 @@ const NavLinks = () => {
   const [isMouseEnter, setIsMouseEnter] = useState<number | null>(null);
   const [keyCounter, setKeyCounter] = useState(0);
 
-  const handleMouseOver = (value: number | null) => {
-    setIsMouseEnter(value);
-    updateKeyCounter();
-  };
+  const handleMouseOver = useCallback(
+    throttle((value: number | null) => {
+      setIsMouseEnter(value);
+      updateKeyCounter();
+    }, 200),
+    []
+  );
 
   const updateKeyCounter = () => {
     setKeyCounter((prev) => {
