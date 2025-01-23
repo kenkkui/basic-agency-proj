@@ -16,8 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <LazyMotion features={domAnimation}>
-        <body className="bg-light-grey text-black text-base selection:bg-black">
-          <Nav />
+        <body className="bg-light-grey text-black text-base selection:bg-black selection:text-[#ffffff]">
+          {/* <Nav /> */}
           {children}
         </body>
       </LazyMotion>
