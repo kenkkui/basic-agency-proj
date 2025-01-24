@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import LoadingHeading from "./LoadingHeading";
 
 const Loading = () => {

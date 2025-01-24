@@ -8,12 +8,16 @@ const LoadingHeading = ({ hide }: LoadingHeadingProps) => {
   return (
     <div
       className={clsx(
-        "h-min text-[128px] leading-[0.9] uppercase font-black tracking-tight",
-        hide ? "invisible" : "absolute top-0 left-0"
+        "text-[128px] leading-[0.9] uppercase font-black tracking-tight",
+        hide
+          ? "invisible"
+          : "absolute top-0 left-0 bg-red-400 h-10 overflow-hidden"
       )}
     >
-      <div>basic</div>
-      <div>/ dept®</div>
+      <div className="w-fit h-min">
+        <div>basic</div>
+        <div>/ dept®</div>
+      </div>
     </div>
   );
 };
