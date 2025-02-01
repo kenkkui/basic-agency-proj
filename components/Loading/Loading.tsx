@@ -1,14 +1,27 @@
+"use client";
+
 import BrandName from "./BrandName";
 import TransitionBackground from "../Background/TransitionBackground";
-import LoadingHeadingText from "./LoadingHeadingText";
+import { useState } from "react";
 
-const Loading = () => {
+interface LoadingProps {
+  hiddenText: React.ReactNode;
+  shownText: React.ReactNode;
+}
+
+const Loading = ({ hiddenText, shownText }: LoadingProps) => {
+  const [animationComplete, setAnimationComplete] = useState(false);
+
   return (
     <section className="w-screen h-screen">
-      <TransitionBackground />
+      <TransitionBackground animationComplete={animationComplete} />
 
-      <BrandName hidden={<LoadingHeadingText hide />}>
-        <LoadingHeadingText />
+      <BrandName
+        hidden={hiddenText}
+        animationComplete={animationComplete}
+        setAnimationComplete={setAnimationComplete}
+      >
+        {shownText}
       </BrandName>
     </section>
   );

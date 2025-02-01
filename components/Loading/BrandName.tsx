@@ -1,16 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import LoadingHeadingAnimation from "./LoadingHeadingAnimation";
 
 interface BrandNameProps {
   hidden?: React.ReactNode;
   children?: React.ReactNode;
+  setAnimationComplete: React.Dispatch<React.SetStateAction<boolean>>;
+  animationComplete: boolean;
 }
 
-const BrandName = ({ children, hidden }: BrandNameProps) => {
-  const [animationComplete, setAnimationComplete] = useState(false);
-
+const BrandName = ({
+  children,
+  hidden,
+  setAnimationComplete,
+  animationComplete,
+}: BrandNameProps) => {
   return (
     <>
       {!animationComplete && (
