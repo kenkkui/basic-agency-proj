@@ -2,13 +2,16 @@
 
 import parseEasing from "@/utils/parseEasing";
 import { m } from "framer-motion";
+import React from "react";
 
 interface LoadingHeadingAnimationProps {
   children?: React.ReactNode;
+  setAnimationComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const LoadingHeadingAnimation = ({
   children,
+  setAnimationComplete,
 }: LoadingHeadingAnimationProps) => {
   return (
     <m.div
@@ -20,6 +23,7 @@ const LoadingHeadingAnimation = ({
         delay: 0.2,
         ease: parseEasing("expo.inOut"),
       }}
+      onAnimationComplete={() => setAnimationComplete(true)}
     >
       {children}
     </m.div>

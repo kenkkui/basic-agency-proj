@@ -54,7 +54,7 @@ const CTABtn = () => {
 
   return (
     <section
-      className="w-screen h-screen fixed bg-pink-500"
+      className="w-screen h-screen fixed"
       onMouseMove={(e) => handleMouseMove(e)}
       onMouseLeave={handleMouseLeave}
     >

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import { domAnimation, LazyMotion } from "framer-motion";
+import Background from "@/components/Background/Background";
 
 export const metadata: Metadata = {
   title: "",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <LazyMotion features={domAnimation}>
         <body className="bg-light-grey text-black text-base selection:bg-black selection:text-[#ffffff]">
           {/* <Nav /> */}
+          <Background />
           {children}
         </body>
       </LazyMotion>
